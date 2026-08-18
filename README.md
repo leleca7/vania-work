@@ -1,12 +1,29 @@
 # Vania Work
 
-Assistente pessoal de renda remota da Vania.
+Painel pessoal da Vania para organizar oportunidades de renda remota, freelas, estudos e ganhos sem automatizar etapas que precisam ser humanas.
 
-## Objetivo
-Organizar oportunidades de trabalho remoto, pesquisas remuneradas e freelas em um painel simples, priorizando valor por hora e respeitando as regras de automação de cada plataforma.
+## Arquitetura v0.2
 
-## Estado atual
-Protótipo funcional e responsivo. Os dados exibidos nesta fase são demonstrativos. Integrações reais devem usar apenas APIs, notificações e métodos permitidos por cada plataforma.
+- **Frontend:** HTML/CSS/JS mobile-first.
+- **Login e banco:** Supabase Auth + Postgres com RLS por usuário.
+- **IA:** Vercel AI Gateway via AI SDK, executada somente no backend.
+- **Monitor:** endpoint agendado a cada 12h; a preferência individual decide se cada ciclo roda em 12h ou 24h.
+- **Segurança:** nenhuma chave secreta fica no navegador ou no GitHub.
 
-## Princípio do produto
-O sistema automatiza busca, organização, tradução, priorização, propostas e acompanhamento quando permitido. Etapas que exigem participação humana — como screeners, entrevistas, testes e tarefas com restrição de IA — permanecem com a Vania.
+## Dados salvos
+
+`profiles`, `user_preferences`, `opportunities`, `earnings`, `monitor_runs`, `ai_events` e `platform_rules`.
+
+## IA
+
+A IA pode analisar e resumir oportunidades, estimar prioridade, preparar propostas e responder no assistente. Ela não responde screeners, pesquisas, testes humanos nem executa automações bloqueadas pelas regras das plataformas.
+
+## Configuração
+
+1. Criar um projeto Supabase separado para o Vania Work.
+2. Aplicar `supabase/migrations/001_vania_work_core.sql`.
+3. Configurar as variáveis descritas em `.env.example` na Vercel.
+4. Criar a conta da Vania no Supabase Auth.
+5. Fazer deploy na Vercel.
+
+A aplicação mantém o modo demonstração quando o backend ainda não está configurado.
