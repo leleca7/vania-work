@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111827" />
+  <title>Vania Work — Assistente de Renda Remota</title>
+  <meta name="description" content="Painel pessoal da Vania para organizar oportunidades de trabalho remoto, pesquisas e freelas." />
+  <style>
+    :root{--bg:#f7f8fc;--card:#fff;--ink:#101828;--muted:#667085;--line:#e8eaf0;--brand:#6d5dfc;--brand2:#8b5cf6;--green:#16a34a;--orange:#d97706;--red:#dc2626;--shadow:0 24px 70px rgba(15,23,42,.08);--radius:24px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 10% 0,#ecebff 0,transparent 28%),var(--bg);color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:250px 1fr}.sidebar{position:sticky;top:0;height:100vh;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border-right:1px solid var(--line);padding:26px 18px;z-index:20}.brand{display:flex;align-items:center;gap:12px;padding:0 8px 28px}.brandmark{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;color:#fff;font-weight:900;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 14px 34px rgba(109,93,252,.3)}.brand b{display:block;font-size:17px}.brand span{display:block;color:var(--muted);font-size:11px;margin-top:2px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#475467;padding:12px 13px;border-radius:13px;text-align:left;font-weight:650}.nav button:hover,.nav button.active{background:#f1efff;color:#5145cd}.statusbox{position:absolute;left:18px;right:18px;bottom:18px;border:1px solid var(--line);background:#fff;border-radius:18px;padding:15px}.statusbox b{font-size:12px}.statusbox p{margin:7px 0 0;color:var(--muted);font-size:11px;line-height:1.45}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:7px;box-shadow:0 0 0 5px rgba(34,197,94,.1)}.main{padding:34px 36px 70px;max-width:1500px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}.hello h1{margin:0;font-size:31px;letter-spacing:-.04em}.hello p{margin:6px 0 0;color:var(--muted);font-size:13px}.top-actions{display:flex;gap:9px;align-items:center}.ghost{border:1px solid var(--line);background:#fff;color:#475467;padding:10px 13px;border-radius:14px}.avatar{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:#111827;color:#fff;font-weight:900}.demo{padding:12px 14px;border:1px solid #fed7aa;background:#fff7ed;color:#9a3412;border-radius:15px;font-size:12px;margin-bottom:18px}.grid-hero{display:grid;grid-template-columns:1.55fr .95fr;gap:18px}.card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:26px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-85px;top:-90px;background:linear-gradient(145deg,rgba(109,93,252,.17),rgba(139,92,246,.02))}.kicker{font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#796bea}.hero h2{font-size:25px;line-height:1.15;letter-spacing:-.03em;margin:9px 0 8px;max-width:650px}.hero p{max-width:650px;color:var(--muted);font-size:13px;line-height:1.6;margin:0 0 18px}.actions{display:flex;gap:10px;flex-wrap:wrap}.primary{border:0;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));padding:12px 16px;border-radius:14px;font-weight:850;box-shadow:0 12px 26px rgba(109,93,252,.25)}.secondary{border:1px solid var(--line);background:#fff;color:#344054;padding:12px 16px;border-radius:14px;font-weight:750}.monitor{padding:22px}.monhead{display:flex;align-items:center;justify-content:space-between}.live{font-size:11px;font-weight:850;color:#15803d}.pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:#22c55e;margin-right:6px}.scan{font-size:39px;font-weight:900;letter-spacing:-.05em;margin:14px 0 0}.muted{color:var(--muted);font-size:12px}.triple{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.mini{border:1px solid #eff1f5;background:#fbfcff;border-radius:13px;padding:11px}.mini b{display:block;font-size:18px}.mini span{font-size:10px;color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.metric{padding:18px}.metric .label{font-size:11px;color:var(--muted)}.metric b{display:block;font-size:24px;margin-top:8px;letter-spacing:-.04em}.metric small{color:#16a34a;font-weight:800}.content{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.72fr);gap:18px}.panel{padding:21px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.panelhead h3{margin:0;font-size:17px}.panelhead p{margin:4px 0 0;color:var(--muted);font-size:11px}.link{border:0;background:transparent;color:#5e52da;font-weight:850;font-size:11px}.opps{display:grid;gap:10px}.opp{border:1px solid var(--line);border-radius:17px;padding:15px;background:#fff;transition:.18s}.opp:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(15,23,42,.07)}.opptop{display:flex;gap:11px;align-items:flex-start}.platform{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#111827;color:#fff;font-size:11px;font-weight:900;flex:0 0 auto}.platform.up{background:#14a800}.platform.res{background:#6d28d9}.platform.pro{background:#0f766e}.oppbody{min-width:0;flex:1}.opptitle{font-size:13px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.oppsub{font-size:10px;color:var(--muted);margin-top:4px}.score{font-size:10px;padding:6px 8px;border-radius:999px;background:#ecfdf3;color:#15803d;font-weight:900;white-space:nowrap}.oppdata{display:flex;gap:14px;flex-wrap:wrap;margin:12px 0;font-size:11px}.oppdata b{font-size:12px}.small{border:0;background:#111827;color:#fff;padding:9px 11px;border-radius:11px;font-size:10px;font-weight:850}.small.alt{background:#fff;color:#475467;border:1px solid var(--line)}.mission{padding:22px;background:linear-gradient(150deg,#17192c,#2b2c50);color:#fff;border:0}.mission p{color:#bfc3d9}.goal{font-size:29px;font-weight:900;margin:5px 0 12px}.progress{height:8px;border-radius:99px;overflow:hidden;background:rgba(255,255,255,.12)}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#c4b5fd)}.steps{display:grid;gap:10px;margin-top:17px}.step{display:flex;gap:10px;font-size:11px;color:#d8dbea}.check{width:22px;height:22px;border-radius:8px;background:rgba(255,255,255,.1);display:grid;place-items:center;flex:0 0 auto}.section{display:none}.section.active{display:block}.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.rulecard{padding:20px}.rulehead{display:flex;gap:11px;align-items:center}.rulehead h4{margin:0;font-size:14px}.rulehead p{margin:3px 0 0;font-size:10px;color:var(--muted)}.rulelist{margin-top:14px;display:grid}.rule{padding:10px 0;border-top:1px solid #f0f2f5;display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:11px}.badge{font-size:9px;font-weight:900;padding:5px 7px;border-radius:999px}.auto{background:#eef2ff;color:#4f46e5}.human{background:#fff7ed;color:#c2410c}.blocked{background:#fef2f2;color:#b91c1c}.approve{background:#ecfdf3;color:#15803d}.twocol{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.task{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-top:1px solid var(--line)}.task:first-child{border-top:0}.num{width:38px;height:38px;border:0;border-radius:12px;background:#f1efff;color:#5b4ce7;font-weight:900}.task.done{opacity:.55}.task h4{margin:0 0 3px;font-size:12px}.task p{margin:0;color:var(--muted);font-size:10px}.chip{font-size:9px;border:1px solid var(--line);padding:6px 8px;border-radius:999px}.assistantbox{padding:21px}.bubble{padding:13px;border-radius:15px;background:#f7f7ff;border:1px solid #ecebff;color:#344054;font-size:11px;line-height:1.5;min-height:76px}.ask{display:flex;gap:8px;margin-top:10px}.ask input{min-width:0;flex:1;border:1px solid var(--line);border-radius:12px;padding:10px 11px;outline:none}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.field label{display:block;font-size:10px;font-weight:800;color:#475467;margin-bottom:6px}.field input,.field select{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px;outline:none}.savebar{margin-top:15px}.toast{position:fixed;right:24px;bottom:24px;background:#111827;color:#fff;padding:12px 15px;border-radius:13px;font-size:11px;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s;z-index:100}.toast.show{opacity:1;transform:none}.modal{position:fixed;inset:0;background:rgba(15,23,42,.38);display:none;place-items:center;padding:20px;z-index:99}.modal.show{display:grid}.modalcard{width:min(620px,100%);background:#fff;border-radius:24px;padding:22px;box-shadow:0 30px 90px rgba(15,23,42,.25)}.modalhead{display:flex;justify-content:space-between;align-items:center}.modalhead h3{margin:0}.x{border:0;background:#f2f4f7;width:34px;height:34px;border-radius:11px}.proposal{white-space:pre-wrap;background:#f8fafc;border:1px solid var(--line);border-radius:15px;padding:15px;font-size:12px;line-height:1.55;margin:14px 0}.mobile-nav{display:none}
+    @media(max-width:1000px){.app{grid-template-columns:1fr}.sidebar{display:none}.main{padding:24px 18px 90px}.grid-hero,.content,.twocol{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.rules{grid-template-columns:1fr}.mobile-nav{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-top:1px solid var(--line);padding:8px 7px max(8px,env(safe-area-inset-bottom));z-index:50}.mobile-nav button{border:0;background:transparent;color:#667085;font-size:18px}.mobile-nav button span{display:block;font-size:9px;margin-top:3px}.mobile-nav button.active{color:#5b4ce7}.top-actions .ghost span{display:none}}
+    @media(max-width:620px){.main{padding:18px 13px 88px}.hello h1{font-size:26px}.top{align-items:flex-start}.avatar{display:none}.grid-hero{gap:13px}.hero,.monitor,.panel,.assistantbox,.rulecard{padding:18px}.hero h2{font-size:22px}.metrics{gap:10px}.metric{padding:15px}.metric b{font-size:21px}.triple{grid-template-columns:repeat(3,1fr)}.formgrid{grid-template-columns:1fr}.score{display:none}.oppdata{gap:10px}.twocol{gap:13px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="brandmark">V</div><div><b>Vania Work</b><span>Assistente de renda remota</span></div></div>
+    <nav class="nav">
+      <button class="active" data-tab="inicio">⌂ &nbsp; Início</button>
+      <button data-tab="oportunidades">◎ &nbsp; Oportunidades</button>
+      <button data-tab="rotina">✓ &nbsp; Meu turno</button>
+      <button data-tab="regras">◇ &nbsp; Regras das plataformas</button>
+      <button data-tab="config">⚙ &nbsp; Preferências</button>
+    </nav>
+    <div class="statusbox"><b><span class="dot"></span>Assistente ativo</b><p>O painel organiza oportunidades e respeita o limite de automação permitido por cada plataforma.</p></div>
+  </aside>
+
+  <main class="main">
+    <div class="top">
+      <div class="hello"><h1>Bom dia, Vania ✨</h1><p>Seu trabalho começa pelo que realmente merece sua atenção.</p></div>
+      <div class="top-actions"><button class="ghost" id="monitorToggle">● <span>Monitor 24h</span></button><div class="avatar">V</div></div>
+    </div>
+    <div class="demo"><b>Protótipo demonstrativo:</b> as oportunidades e valores desta versão são exemplos. A versão conectada usará apenas fontes, APIs e notificações permitidas.</div>
+
+    <section id="inicio" class="section active">
+      <div class="grid-hero">
+        <div class="card hero">
+          <div class="kicker">Seu turno inteligente</div>
+          <h2>Quatro horas focadas no que paga melhor — sem perder tempo procurando.</h2>
+          <p>O Vania Work separa o que vale a pena, traduz, calcula valor por hora, prepara propostas quando permitido e mostra só as etapas que realmente precisam de você.</p>
+          <div class="actions"><button class="primary" onclick="goTab('rotina')">Começar meu turno</button><button class="secondary" onclick="goTab('oportunidades')">Ver melhores oportunidades</button></div>
+        </div>
+        <div class="card monitor">
+          <div class="monhead"><div><b>Monitor de oportunidades</b><div class="muted">Janela de 24 horas</div></div><div class="live"><span class="pulse"></span>ATIVO</div></div>
+          <div class="scan" id="scanCount">47</div><div class="muted">oportunidades analisadas</div>
+          <div class="triple"><div class="mini"><b>8</b><span>recomendadas</span></div><div class="mini"><b>5</b><span>em dólar</span></div><div class="mini"><b>3</b><span>propostas prontas</span></div></div>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="card metric"><div class="label">Meta inicial</div><b>US$ 50</b><small>primeiro marco</small></div>
+        <div class="card metric"><div class="label">Tempo planejado</div><b>4h</b><small>turno produtivo</small></div>
+        <div class="card metric"><div class="label">Melhor compatibilidade</div><b>94%</b><small>exemplo atual</small></div>
+        <div class="card metric"><div class="label">Prioridade</div><b>US$/h</b><small>valor por hora</small></div>
+      </div>
+
+      <div class="content">
+        <div class="card panel">
+          <div class="panelhead"><div><h3>Melhores para você</h3><p>Ordenadas por compatibilidade, valor e esforço.</p></div><button class="link" onclick="goTab('oportunidades')">VER TODAS</button></div>
+          <div class="opps" id="homeOpps"></div>
+        </div>
+        <div class="card mission">
+          <div class="panelhead"><div><h3>Missão: primeiros US$50</h3><p>Meta motivacional — não é renda garantida.</p></div></div>
+          <div class="goal">US$ 0 / US$ 50</div><div class="progress"><div></div></div>
+          <div class="steps"><div class="step"><div class="check">1</div><div><b>Preparar o perfil</b><br>Informações reais e completas.</div></div><div class="step"><div class="check">2</div><div><b>Enviar boas candidaturas</b><br>Qualidade antes de quantidade.</div></div><div class="step"><div class="check">3</div><div><b>Concluir o primeiro trabalho</b><br>Registrar somente valor confirmado.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="oportunidades" class="section">
+      <div class="card panel">
+        <div class="panelhead"><div><h3>Oportunidades</h3><p>Exemplos para demonstrar como o ranking funcionará.</p></div><select id="oppFilter" class="ghost"><option value="all">Todas</option><option value="usd">Só dólar</option><option value="high">90%+ compatível</option></select></div>
+        <div class="opps" id="allOpps"></div>
+      </div>
+    </section>
+
+    <section id="rotina" class="section">
+      <div class="twocol">
+        <div class="card panel"><div class="panelhead"><div><h3>Turno de hoje</h3><p>O sistema coloca primeiro o que mais vale seu tempo.</p></div></div><div id="taskList"></div></div>
+        <div class="card assistantbox"><div class="panelhead"><div><h3>Assistente da Vania</h3><p>Pergunte o que fazer em seguida.</p></div></div><div class="bubble" id="assistantBubble">Eu priorizaria primeiro as tarefas com maior valor por hora e maior compatibilidade.</div><div class="ask"><input id="assistantInput" placeholder="Ex.: o que faço primeiro?"/><button class="primary" id="askBtn">Perguntar</button></div></div>
+      </div>
+    </section>
+
+    <section id="regras" class="section">
+      <div class="panelhead"><div><h3>Motor de regras por plataforma</h3><p>A automação para exatamente onde a plataforma exige uma pessoa real.</p></div></div>
+      <div class="rules" id="rulesGrid"></div>
+    </section>
+
+    <section id="config" class="section">
+      <div class="card panel"><div class="panelhead"><div><h3>Preferências da Vania</h3><p>Configurações locais deste protótipo.</p></div></div><div class="formgrid"><div class="field"><label>Nome</label><input id="nameField" value="Vania"></div><div class="field"><label>Tempo disponível por dia</label><select id="hoursField"><option>2 horas</option><option selected>4 horas</option><option>6 horas</option></select></div><div class="field"><label>Primeira meta</label><select id="goalField"><option selected>US$ 50</option><option>US$ 100</option><option>US$ 300</option></select></div><div class="field"><label>Ciclo de análise</label><select id="cycleField"><option>12 horas</option><option selected>24 horas</option></select></div><div class="field"><label>Prioridade</label><select><option selected>Maior valor por hora</option><option>Maior chance de aprovação</option><option>Mais simples primeiro</option></select></div><div class="field"><label>Idioma</label><select><option selected>Português + traduzir inglês</option><option>Somente português</option></select></div></div><div class="savebar"><button class="secondary" id="savePrefs">Salvar preferências</button></div></div>
+    </section>
+  </main>
+</div>
+
+<nav class="mobile-nav"><button class="active" data-tab="inicio">⌂<span>Início</span></button><button data-tab="oportunidades">◎<span>Trabalhos</span></button><button data-tab="rotina">✓<span>Hoje</span></button><button data-tab="config">⚙<span>Ajustes</span></button></nav>
+<div class="toast" id="toast"></div>
+<div class="modal" id="modal"><div class="modalcard"><div class="modalhead"><h3>Proposta preparada ✨</h3><button class="x" onclick="closeModal()">×</button></div><p class="muted">Texto demonstrativo para a Vania revisar antes do envio.</p><div class="proposal" id="proposalText"></div><div class="actions" style="justify-content:flex-end"><button class="secondary" onclick="closeModal()">Fechar</button><button class="primary" id="copyProposal">Copiar proposta</button></div></div></div>
+
+<script>
+const opportunities=[
+{id:1,platform:'Upwork',cls:'up',title:'Assistente virtual — organização de dados',pay:'US$ 35',usd:true,time:'~2h',score:94,type:'Freela',action:'proposal',desc:'Organizar informações em planilha e revisar dados.'},
+{id:2,platform:'Respondent',cls:'res',title:'Estudo sobre hábitos de compras online',pay:'US$ 75',usd:true,time:'~60 min',score:89,type:'Pesquisa',action:'human',desc:'Participação sujeita à seleção por screener.'},
+{id:3,platform:'Prolific',cls:'pro',title:'Estudo acadêmico — comportamento digital',pay:'US$ 8',usd:true,time:'~35 min',score:86,type:'Estudo',action:'human',desc:'Responder pessoalmente no site oficial.'},
+{id:4,platform:'Outlier',cls:'',title:'Projeto de avaliação em português',pay:'US$ 10/h',usd:true,time:'1–3h',score:80,type:'Projeto',action:'human',desc:'Execução pessoal conforme as regras do projeto.'},
+{id:5,platform:'99Freelas',cls:'up',title:'Cadastro de produtos em planilha',pay:'R$ 120',usd:false,time:'~3h',score:91,type:'Freela',action:'proposal',desc:'A proposta pode ser preparada; Vania revisa e envia.'},
+{id:6,platform:'UserTesting',cls:'pro',title:'Teste de experiência em aplicativo',pay:'US$ 10',usd:true,time:'~20 min',score:77,type:'Teste',action:'human',desc:'Teste e respostas precisam ser feitos pela participante.'}
+];
+const rules=[
+{name:'Upwork',letter:'U',cls:'up',sub:'Freelas internacionais',items:[['Buscar/filtrar por integração permitida','auto'],['Traduzir e resumir vaga','auto'],['Preparar proposta','auto'],['Revisar e enviar','approve'],['Executar trabalho','human']]},
+{name:'Respondent',letter:'R',cls:'res',sub:'Pesquisas de mercado',items:[['Ler convites/notificações','auto'],['Traduzir e priorizar','auto'],['Responder screener','human'],['Entrevista / pesquisa','human'],['Bot respondendo por ela','blocked']]},
+{name:'Prolific',letter:'P',cls:'pro',sub:'Estudos acadêmicos',items:[['Organizar notificações','auto'],['Calcular valor por hora','auto'],['Reservar estudo por bot','blocked'],['Responder estudo','human'],['IA nas respostas','blocked']]},
+{name:'Outlier',letter:'O',cls:'',sub:'Projetos de IA',items:[['Avisar sobre projetos','auto'],['Organizar agenda e ganhos','auto'],['Assessment','human'],['Tarefa do projeto','human'],['Bot externo na tarefa','blocked']]},
+{name:'UserTesting',letter:'UT',cls:'pro',sub:'Testes de usabilidade',items:[['Organizar convites','auto'],['Lembrar prazo/pagamento','auto'],['Screener','human'],['Realizar teste','human'],['IA durante o teste','blocked']]},
+{name:'99Freelas',letter:'99',cls:'up',sub:'Freelas no Brasil',items:[['Filtrar oportunidades','auto'],['Preparar proposta','auto'],['Revisar proposta','approve'],['Enviar em massa / spam','blocked'],['Entregar conforme combinado','human']]}
+];
+const tasks=[
+{title:'Revisar 2 propostas preparadas',sub:'Upwork + 99Freelas',time:'15 min'},
+{title:'Responder screener selecionado',sub:'Respondent — precisa ser você',time:'10 min'},
+{title:'Executar melhor freela aprovado',sub:'Prioridade por valor/hora',time:'2h 30'},
+{title:'Verificar estudos rápidos',sub:'Prolific / UserTesting',time:'35 min'},
+{title:'Conferir ganhos e pendências',sub:'Fechamento do turno',time:'10 min'}
+];
+function oppHtml(o){return `<div class="opp" data-usd="${o.usd}" data-score="${o.score}"><div class="opptop"><div class="platform ${o.cls}">${o.platform.slice(0,2)}</div><div class="oppbody"><div class="opptitle">${o.title}</div><div class="oppsub">${o.platform} · ${o.type} · exemplo demonstrativo</div></div><div class="score">${o.score}% compatível</div></div><div class="oppdata"><span>💵 <b>${o.pay}</b></span><span>⏱ <b>${o.time}</b></span><span>◇ ${o.desc}</span></div><div class="actions">${o.action==='proposal'?`<button class="small" onclick="openProposal(${o.id})">Gerar proposta</button>`:`<button class="small" onclick="toast('Esta etapa precisa ser feita pessoalmente pela Vania')">Preciso da Vania</button>`}<button class="small alt" onclick="toast('Oportunidade salva na demonstração')">Salvar</button></div></div>`}
+document.getElementById('homeOpps').innerHTML=opportunities.slice(0,3).map(oppHtml).join('');
+document.getElementById('allOpps').innerHTML=opportunities.map(oppHtml).join('');
+document.getElementById('rulesGrid').innerHTML=rules.map(r=>`<div class="card rulecard"><div class="rulehead"><div class="platform ${r.cls}">${r.letter}</div><div><h4>${r.name}</h4><p>${r.sub}</p></div></div><div class="rulelist">${r.items.map(i=>`<div class="rule"><span>${i[0]}</span><span class="badge ${i[1]}">${({auto:'AUTOMÁTICO',human:'VANIA',blocked:'BLOQUEADO',approve:'1 TOQUE'})[i[1]]}</span></div>`).join('')}</div></div>`).join('');
+document.getElementById('taskList').innerHTML=tasks.map((t,i)=>`<div class="task" id="task${i}"><button class="num" onclick="completeTask(${i})">${i+1}</button><div><h4>${t.title}</h4><p>${t.sub}</p></div><div class="chip">${t.time}</div></div>`).join('');
+function goTab(id){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>goTab(b.dataset.tab)));
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+function openProposal(id){const o=opportunities.find(x=>x.id===id);document.getElementById('proposalText').textContent=`Olá! Tenho interesse no projeto “${o.title}”.\n\nSou organizada, cuidadosa com detalhes e tenho disponibilidade para iniciar. Posso seguir as orientações do projeto e manter uma comunicação clara durante a execução.\n\nAntes de começar, gostaria apenas de confirmar o formato final da entrega e o prazo esperado.\n\nObrigada!\nVania`;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.getElementById('copyProposal').onclick=()=>{navigator.clipboard?.writeText(document.getElementById('proposalText').textContent);toast('Proposta copiada');closeModal()};
+function completeTask(i){document.getElementById('task'+i).classList.toggle('done');toast('Progresso do turno atualizado')}
+document.getElementById('oppFilter').addEventListener('change',e=>{document.querySelectorAll('#allOpps .opp').forEach(el=>{const ok=e.target.value==='all'||(e.target.value==='usd'&&el.dataset.usd==='true')||(e.target.value==='high'&&+el.dataset.score>=90);el.style.display=ok?'block':'none'})});
+let monitor=true;document.getElementById('monitorToggle').onclick=()=>{monitor=!monitor;document.getElementById('monitorToggle').innerHTML=(monitor?'●':'○')+' <span>Monitor '+(monitor?'24h':'pausado')+'</span>';toast(monitor?'Monitor demonstrativo ativado':'Monitor demonstrativo pausado')};
+document.getElementById('savePrefs').onclick=()=>{localStorage.setItem('vaniaPrefs',JSON.stringify({name:document.getElementById('nameField').value,hours:document.getElementById('hoursField').value,goal:document.getElementById('goalField').value}));toast('Preferências salvas neste dispositivo')};
+document.getElementById('askBtn').onclick=()=>{const q=document.getElementById('assistantInput').value.toLowerCase();let a='Eu priorizaria primeiro as tarefas com maior valor por hora e maior compatibilidade.';if(q.includes('primeiro'))a='<b>Comece pelas propostas prontas.</b><br>Elas tomam poucos minutos. Depois faça as etapas humanas com prazo e use o maior bloco do turno no melhor freela aprovado.';if(q.includes('dólar'))a='<b>Há exemplos em dólar no Upwork, Respondent, Prolific e Outlier.</b><br>Na versão conectada, o painel vai ordenar pelas oportunidades reais disponíveis para a Vania.';document.getElementById('assistantBubble').innerHTML=a;document.getElementById('assistantInput').value=''};
+const saved=JSON.parse(localStorage.getItem('vaniaPrefs')||'null');if(saved){document.getElementById('nameField').value=saved.name||'Vania';document.getElementById('hoursField').value=saved.hours||'4 horas';document.getElementById('goalField').value=saved.goal||'US$ 50'}
+setInterval(()=>{if(monitor){const e=document.getElementById('scanCount');const n=+e.textContent;if(n<59&&Math.random()>.55)e.textContent=n+1}},4500);
+</script>
+</body>
+</html>
